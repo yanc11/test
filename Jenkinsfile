@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'sleep 20'
+                sh 'sleep 30'
             }
         }
     }
