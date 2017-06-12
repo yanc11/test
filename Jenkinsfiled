@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh 'echo "Daily build~~~~~~~~~~~~~~~~~~~~~~~~~`"'
+                sh '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                '''
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'sleep 10'
+            }
+        }
+    }
+}
